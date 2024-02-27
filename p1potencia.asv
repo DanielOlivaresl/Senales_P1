@@ -1,0 +1,11 @@
+tiempo = 0:0.1:24; % De 0 a 24 horas, con incrementos de 0.1 horas para mayor resolución
+
+% Simula el consumo de energía en watts
+% Usamos una función sinusoidal para simular un patrón diario de consumo
+amplitudPotencia = 500; % Amplitud de la variación de la potencia (watts)
+mediaPotencia = 1000; % Potencia media (watts)
+potencia = amplitudPotencia * sin(2 * pi * (tiempo-6) / 24) + mediaPotencia; % Desfase para simular un pico de actividad al mediodía
+
+% Visualización del consumo de energía
+figure; 
+plot(tiempo, potencia, 'b-', 'LineWidth', 2);
